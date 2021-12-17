@@ -6,16 +6,17 @@ function access(){
         let path = window.location.pathname;
         console.log(path)
         path = path.split("/");
-        path.pop();
+        path = path.slice(0, -1);
         console.log(path)
-        path = path.join();
+        path = path.join("/");
+        console.log(path)
 
         let url = "";
 
         console.log(path);
 
         if(path){
-            url = window.location.protocol + "//" + window.location.host + "/" + path;
+            url = window.location.protocol + "//" + window.location.host + path;
             console.log(url)
         }
         else{
