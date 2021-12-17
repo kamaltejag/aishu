@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  font-family: "KoHo", sans-serif;
+}
+
+.card {
+  position: absolute;
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 600px;
+  transform-style: preserve-3d;
+  transition: box-shadow 1s ease;
+}
+
+.card:hover,
+.shadow {
+  box-shadow: 0.2rem 0.5rem 5rem #ecf0f1;
+}
+
+.front {
+  position: absolute;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: 0.5s;
+}
+.front img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.back {
+  position: absolute;
+  border-radius: 0.5rem;
+  background: #e74c3c;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  transition: 0.5s;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.info {
+  text-align: center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: 1rem;
+  font-size: 0.81rem;
+  font-weight: bold;
+}
+
+.info h3 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.emoji i:nth-child(2n-1) {
+  color: rgb(0, 194, 201);
+}
+
+.emoji i:nth-child(2) {
+  color: rgb(179, 0, 0);
+}
+
+img{
+  border-radius: 0.5rem;
+}
