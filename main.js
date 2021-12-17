@@ -23,6 +23,6 @@ function access(){
 //             url = window.location.protocol + "//" + window.location.host + "/" + "landing.html";
 //             console.log(url)
 //         }
-        window.location.href = "https://kamaltejag.github.io/landing.html";
+        window.location.href = "https://kamaltejag.github.io/aishu/landing.html";
     }
 }
